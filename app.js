@@ -41,7 +41,11 @@ cron.schedule('5 0 * * TUE', () => {
   Week_controller.UpdateWeeklyHOURES_SET();
 });
 
-
+// cron.schedule('*/0.6 * * * *', () => {
+//   //console.log('create new week every friday');
+//   console.log("HIIIII");
+// });
+ 
 function GetCurrentTime() {
     
     fetch('http://api.timezonedb.com/v2.1/get-time-zone?key=OWY79JY6A753&format=json&by=position&lat=40.689247&lng=-74.044502')
@@ -82,3 +86,6 @@ app.use((err, req, res, next)=>{
 })
 // for index
 module.exports = app;
+// app.listen(5000, ()=>{
+//   console.log('Running server');
+// })
