@@ -6,6 +6,8 @@ module.exports = (app) =>{
   Department_controller.AllDepartments);
   app.get('/api/GetDepartment',
   Department_controller.GetDepartment);
+  app.get('/',
+  Department_controller.hi);
   
   // app.get('/api/GetUser',
   // Department_controller.GetUser);

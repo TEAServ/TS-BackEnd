@@ -15,6 +15,9 @@ module.exports = {
     })
     .catch(next)
   },
+  hi(req, res, next){
+      res.status(200).send("N/A")
+  },
   GetDepartment(req, res, next){
     Department.findById(req.query.id)
     .then(dep => {
